@@ -1,5 +1,6 @@
 package Ex_pag_26;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main_exPag26 {
@@ -16,11 +17,10 @@ public class Main_exPag26 {
         for(int cont = 0; cont<10;cont++) {
             System.out.printf("A marcha atual é %d", carro.marcha);
             System.out.println();
-            System.out.println("Troque a velocidade");
-            velocidade = leitor.nextInt();
+            velocidade = Integer.parseInt(JOptionPane.showInputDialog("Troque a velocidade"));
             carro.trocarMarcha(velocidade);
         }
-
+        cadastro.exibir_dados();
 
     }
 
